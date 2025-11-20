@@ -110,26 +110,26 @@ The GUI provides an accessible interface for navigating puzzles and revealing an
 ### 1. Install Dependencies
 You only need Python and Tkinter:
 
-sudo apt install python3 python3-tk
+    sudo apt install python3 python3-tk
 
 ---
 
 ### 2. Run the GUI
 Inside the logicsGUI folder:
 
-python3 gui.py
+    python3 gui.py
 
 ---
 
 ### 3. Running the Puzzle Models
 To generate or verify logic models manually:
 
-prover9 -f placings
-mace4 -f books
-mace4 -f firstLastNames
-mace4 -f toddlersAndTeddies
+    prover9 -f placings
+    mace4 -f books
+    mace4 -f firstLastNames
+    mace4 -f toddlersAndTeddies
 
-Note:
+**Note:**  
 The Placings puzzle must be run with Prover9 because Mace4 cannot generate a model large enough.
 
 ---
