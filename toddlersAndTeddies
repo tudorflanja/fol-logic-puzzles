@@ -1,0 +1,51 @@
+%At the local play group for babies and toddlers, I was asking the mothers about the number of teddies each of their children has. The four children are aged 1, 2, 3 and 4. 
+%Remarkably, the children have one, two, three and four teddies, although not necessarily respectively. James has more teddies than his age. John is older than Matthew. Curiously only 
+%one child has the same number of teddies as his age. Paul has less teddies than John, and the child aged 3 has two teddies. Paul is the youngest.
+
+%How old is each child and how many teddies do they have each?
+
+set(arithmetic).  
+assign(domain_size, 4).
+
+list(distinct).
+
+[James, John, Matthew, Paul].
+[t1, t2, t3, t4].
+
+end_of_list.
+
+formulas(assumptions).
+
+%Paul is the youngest, so he is 1 year old
+%James has more teddies than his age and Paul is 1 year old, so James can be either 2 or 3 years old
+%John being older than Matthew and Paul being 1 means that Matthew can be only 2 or 3 years old and that John can be 3 or 4
+%The child aged 3 has two teddies, so that he can't be James so it's either John or Matthew -> James is 2 years old
+%There remains two toddlers without an age assigned and they are John and Matthew. John being older than Matthew, it means that
+%Matthew is 3 and John is 4
+Paul = 0.
+James = 1. 
+Matthew = 2. 
+John = 3.
+
+%Child aged 3(Matthew) has 2 teddies
+Matthew = t2.
+
+%James(being 2) can have either 3 or 4 teddies
+James = t3 | James = t4.
+
+%Matthew and James both having a number of teddies different to their age, it remains that Paul and John have the same number
+%of teddies as their age
+Paul = t1 | John = t4.
+
+%If Paul has 3 teddies, then John will have 4 teddies and James 1 that will be in contradiction with this statement:
+%"James has more teddies than his age". Paul can't have 4 teddies because that way will have more than John(which is not allowed)
+%That remains that John can't have 4 teddies
+John != t4. 
+
+
+
+
+ 
+ 
+
+

@@ -1,0 +1,36 @@
+%Jake, John, Joe, and Jack each have a different favorite book series. These include "Harry Potter", "The Lord of the Rings", "Sherlock Holmes", and "The Hardy Boys". 
+%Using the clues, figure out who likes which book series.
+
+%1. Jake and Joe love mysteries, while John and Jack prefer magic and fantasy.
+%2. "Joe" is the name of a character in Joe's favorite series.
+%3. John's Halloween costume, based on his favorite series, includes glasses and a black robe.
+
+set(arithmetic).  
+assign(domain_size, 4).
+
+list(distinct).
+
+[Jake, John, Joe, Jack].
+[HarryPotter, LordRings, SherlockHolmes, HardyBoys].
+
+end_of_list.
+
+formulas(assumptions).
+
+Jake = 0.
+John = 1.
+Joe = 2.
+Jack = 3.
+
+%1. Jake and Joe love mysteries(Sherlock Holmes and The Hardy Boys), 
+Jake = SherlockHolmes | Jake = HardyBoys.
+Joe = SherlockHolmes | Joe = HardyBoys.
+% while John and Jack prefer magic and fantasy(Harry Potter and Lord of the Rings).
+John = HarryPotter | John = LordRings.
+Jack = HarryPotter | Jack = LordRings.
+%2. "Joe" is the name of a character in Joe's favorite series(Joe Hardy in The Hardy boys).
+Joe = HardyBoys.
+%3. John's Halloween costume, based on his favorite series, includes glasses and a black robe(Harry Potter).
+John = HarryPotter.
+
+end_of_list.

@@ -1,0 +1,53 @@
+%The first names of five people are Beverly, Charles, Monica, Nelson, and Ruth. Their last names are Atwood, Porter, Stafford, Thompson, and Ward. Match each person first and last names.
+%1) Ruth and Porter went hiking yesterday with Monica and Stafford.
+%2) Beverly enrolled her son, and Atwood enrolled her daughter, at the same nursery school.
+%3) Thompson and Ruth don't have children.
+%4) Charles, who has been in the hospital for the past three days, was visited today by Porter and Nelson.
+%5) Charles and Nelson are males and the others are female.
+
+
+set(arithmetic).  
+assign(domain_size, 5).
+
+list(distinct).
+
+[Beverly, Charles, Monica, Nelson, Ruth].
+[Atwood, Porter, Stafford, Thompson, Ward].
+
+end_of_list.
+
+formulas(assumptions). 
+
+	Beverly = 0.
+	Charles = 1.
+	Monica = 2.
+	Nelson = 3.
+	Ruth = 4.
+	
+	%Clue 1. Monica's and Ruth's last name is not Porter, neither Stafford because they went hiking together 
+	Monica != Porter.
+	Monica != Stafford.
+	Ruth != Porter.
+	Ruth != Stafford.
+	
+	%Clue 2. Beverly's last name is not Atwood, because both have enrolled their child to the nursery school
+	%Atwood can not be a male
+	Beverly != Atwood.
+
+	
+	%Clue 3. 
+	Beverly != Thompson.
+	Ruth != Atwood.
+	Ruth != Thompson.
+	
+	%Clue 4. Charles's last name is not Porter, because he was visited in the hospital by him
+	Charles != Porter.
+	Nelson != Porter.
+	Charles != Stafford.
+	
+	%Clue 5
+	Charles != Atwood.
+	Nelson != Atwood.
+
+end_of_list.
+

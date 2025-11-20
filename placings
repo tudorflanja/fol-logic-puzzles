@@ -1,0 +1,276 @@
+%List the order in which each person finished.
+
+%1. Tommy Tombstone finished after Lance Lamers and Brett Brown but before Mitch Monday.
+%2. Peter Poultry finished before Daniel Dusk and Lance Lamers.
+%3. Sam Sunny finished after Peter Poultry and before Jack Jill and Harry Hills.
+%4. Keri Kernel finished after Peter Poultry, Mitch Monday and Tommy Tombstone.
+%5. Lance Lamers finished after Brett Brown and Daniel Dusk, but before Jack Jill and Mitch Monday.
+%6. Mitch Monday finished after Sam Sunny and Brett Brown.
+%7. Brett Brown finished before Jack Jill, Mitch Monday and Peter Poultry.
+%8. Daniel Dusk finished before Keri Kernel and Tommy Tombstone, but after Sam Sunny.
+%9. Jack Jill finished before Keri Kernel, Tommy Tombstone and Mitch Monday, but after Peter Poultry and Daniel Dusk.
+%10. Harry Hills finished before Mitch Monday but after Lance Lamers, Jack Jill and Tommy Tombstone.
+
+%List of people, domain size = 10
+%1.Tommy Tombstone
+%2. Lance Lamers
+%3. Brett Brown
+%4. Mitch Monday
+%5. Peter Poultry
+%6. Daniel Dusk
+%7. Sam Sunny
+%8. Jack Jill
+%9. Harry Hills
+%10. Keri Kernel
+
+%assign(domain_size, 10).
+
+formulas(assumptions).
+ 
+ different(person1,person2).
+ different(person1,person3).
+ different(person1,person4).
+ different(person1,person5).
+ different(person1,person6).
+ different(person1,person7).
+ different(person1,person8).
+ different(person1,person9).
+ different(person1,person10).
+ 
+ different(person2,person3).
+ different(person2,person4).
+ different(person2,person5).
+ different(person2,person6).
+ different(person2,person7).
+ different(person2,person8).
+ different(person2,person9).
+ different(person2,person10).
+ 
+ different(person3,person4).
+ different(person3,person5).
+ different(person3,person6).
+ different(person3,person7).
+ different(person3,person8).
+ different(person3,person9).
+ different(person3,person10).
+ 
+ different(person4,person5).
+ different(person4,person6).
+ different(person4,person7).
+ different(person4,person8).
+ different(person4,person9).
+ different(person4,person10).
+ 
+ different(person5,person6).
+ different(person5,person7).
+ different(person5,person8).
+ different(person5,person9).
+ different(person5,person10).
+ 
+ different(person6,person7).
+ different(person6,person8).
+ different(person6,person9).
+ different(person6,person10).
+ 
+ different(person7,person8).
+ different(person7,person9).
+ different(person7,person10).
+ 
+ different(person8,person9).
+ different(person8,person10).
+ 
+ different(person9,person10).
+ 
+ different(x,y) -> different(y,x).
+ 
+ %next
+ 
+-next(person1, person1).
+-next(person2, person2).
+-next(person3, person3).
+-next(person4, person4).
+-next(person5, person5).
+-next(person6, person6).
+-next(person7, person7).
+-next(person8, person8).
+-next(person9, person9).
+-next(person10, person10).
+ 
+ next(person1, person2).
+-next(person1, person3).
+-next(person1, person4).
+-next(person1, person5).
+-next(person1, person6).
+-next(person1, person7).
+-next(person1, person8).
+-next(person1, person9).
+-next(person1, person10).
+
+ next(person2, person3).
+-next(person2, person4).
+-next(person2, person5).
+-next(person2, person6).
+-next(person2, person7).
+-next(person2, person8).
+-next(person2, person9).
+-next(person2, person10).
+
+ next(person3, person4).
+-next(person3, person5).
+-next(person3, person6).
+-next(person3, person7).
+-next(person3, person8).
+-next(person3, person9).
+-next(person3, person10).
+
+ next(person4, person5).
+-next(person4, person6).
+-next(person4, person7).
+-next(person4, person8).
+-next(person4, person9).
+-next(person4, person10).
+
+ next(person5, person6).
+-next(person5, person7).
+-next(person5, person8).
+-next(person5, person9).
+-next(person5, person10).
+
+ next(person6, person7).
+-next(person6, person8).
+-next(person6, person9).
+-next(person6, person10).
+
+ next(person7, person8).
+-next(person7, person9).
+-next(person7, person10).
+
+ next(person8, person9).
+-next(person8, person10).
+
+next(person9, person10).
+
+-next(person2, person1).
+-next(person3, person1).
+-next(person4, person1).
+-next(person5, person1).
+-next(person6, person1).
+-next(person7, person1).
+-next(person8, person1).
+-next(person9, person1).
+-next(person10, person1).
+
+-next(person3, person2).
+-next(person4, person2).
+-next(person5, person2).
+-next(person6, person2).
+-next(person7, person2).
+-next(person8, person2).
+-next(person9, person2).
+-next(person10, person2).
+
+-next(person4, person3).
+-next(person5, person3).
+-next(person6, person3).
+-next(person7, person3).
+-next(person8, person3).
+-next(person9, person3).
+-next(person10, person3).
+
+-next(person5, person4).
+-next(person6, person4).
+-next(person7, person4).
+-next(person8, person4).
+-next(person9, person4).
+-next(person10, person4).
+
+-next(person6, person5).
+-next(person7, person5).
+-next(person8, person5).
+-next(person9, person5).
+-next(person10, person5).
+
+-next(person7, person6).
+-next(person8, person6).
+-next(person9, person6).
+-next(person10, person6).
+
+-next(person8, person7).
+-next(person9, person7).
+-next(person10, person7).
+
+-next(person9, person8).
+-next(person10, person8).
+
+-next(person10, person9).
+
+%next(x, y) -> next(y, x).
+
+TommyTombstone(x) | LanceLamers(x) | BrettBrown(x) | MitchMonday(x) | PeterPoultry(x) | DanielDusk(x) | SamSunny(x) | JackJill(x) | HarryHills(x) | KeriKernel(x).
+
+TommyTombstone(x) & TommyTombstone(y) -> -different(x, y).
+LanceLamers(x) & LanceLamers(y) -> -different(x, y).
+BrettBrown(x) & BrettBrown(y) -> -different(x, y).
+MitchMonday(x) & MitchMonday(y) -> -different(x, y).
+PeterPoultry(x) & PeterPoultry(y) -> -different(x, y).
+DanielDusk(x) & DanielDusk(y) -> -different(x, y).
+SamSunny(x) & SamSunny(y) -> -different(x, y).
+JackJill(x) & JackJill(y) -> -different(x, y).
+HarryHills(x) & HarryHills(y) -> -different(x, y).
+KeriKernel(x) & KeriKernel(y) -> -different(x, y).
+
+%tasks
+
+%1
+LanceLamers(x) & TommyTombstone(y) -> next(x,y).
+BrettBrown(x) & TommyTombstone(y) -> next(x,y).
+TommyTombstone(x) & MitchMonday(y) -> next(x,y).
+
+%2
+PeterPoultry(x) & DanielDusk(y) -> next(x,y).
+PeterPoultry(x) & LanceLamers(y) -> next(x,y).
+
+%3
+PeterPoultry(x) & SamSunny(y) -> next(x,y).
+SamSunny(x) & JackJill(y) -> next(x,y).
+SamSunny(x) & HarryHills(y) -> next(x,y).
+
+%4
+PeterPoultry(x) & KeriKernel(y) -> next(x,y).
+MitchMonday(x) & KeriKernel(y) -> next(x,y).
+TommyTombstone(x) & KeriKernel(y) -> next(x,y).
+
+%5
+BrettBrown(x) & LanceLamers(y) -> next(x,y).
+DanielDusk(x) & LanceLamers(y) -> next(x,y).
+LanceLamers(x) & JackJill(y) -> next(x,y).
+LanceLamers(x) & MitchMonday(y) -> next(x,y).
+
+%6
+SamSunny(x) & MitchMonday(y) -> next(x,y).
+BrettBrown(x) & MitchMonday(y) -> next(x,y).
+
+%7
+BrettBrown(x) & JackJill(y) -> next(x,y).
+BrettBrown(x) & MitchMonday(y) -> next(x,y).
+BrettBrown(x) & PeterPoultry(y) -> next(x,y).
+
+%8
+DanielDusk(x) & KeriKernel(y) -> next(x,y).
+DanielDusk(x) & TommyTombstone(y) -> next(x,y).
+SamSunny(x) & DanielDusk(y) -> next(x,y).
+
+%9
+JackJill(x) & KeriKernel(y) -> next(x,y).
+JackJill(x) & TommyTombstone(y) -> next(x,y).
+JackJill(x) & MitchMonday(y) -> next(x,y).
+PeterPoultry(x) & JackJill(y) -> next(x,y).
+DanielDusk(x) & JackJill(y) -> next(x,y).
+
+%10
+HarryHills(x) & MitchMonday(y) -> next(x,y).
+LanceLamers(x) & HarryHills(y) -> next(x,y).
+JackJill(x) & HarryHills(y) -> next(x,y).
+TommyTombstone(x) & HarryHills(y) -> next(x,y).
+
+
