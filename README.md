@@ -100,3 +100,64 @@ The GUI (shown in PDF pages 12–13) provides an accessible interface for naviga
 
 ## 📂 Project Structure
 
+books/ # FOL model for the "Books" puzzle
+firstLastNames/ # FOL model for the name-matching puzzle
+logicsGUI/ # Python Tkinter GUI files
+placings/ # FOL model for the Placings race puzzle
+toddlersAndTeddies/ # FOL model for the toddlers puzzle
+README.md # Project documentation
+
+---
+
+## ▶️ How to Run the Project
+
+### 1. Install Dependencies
+You only need Python and Tkinter:
+
+sudo apt install python3 python3-tk
+
+---
+
+### 2. Run the GUI
+Inside the logicsGUI folder:
+
+python3 gui.py
+
+---
+
+### 3. Running the Puzzle Models
+To generate or verify logic models manually:
+
+prover9 -f placings
+mace4 -f books
+mace4 -f firstLastNames
+mace4 -f toddlersAndTeddies
+
+Note:
+The Placings puzzle must be run with Prover9 because Mace4 cannot generate a model large enough (as stated in the PDF).
+
+---
+
+## 🧠 Key Concepts Demonstrated
+
+- Translation of textual clues into First-Order Logic
+- Finite model generation with Mace4
+- Theorem proving with Prover9
+- Successor relations (next) in ordering problems
+- Uniqueness and domain constraints
+- Tkinter GUI design for educational logic tools
+
+---
+
+## 📝 Conclusion
+
+This project demonstrates how First-Order Logic, combined with automated reasoning tools (Prover9 and Mace4), can be used to formally solve classic logic puzzles.
+A simple yet effective Tkinter GUI makes the puzzles interactive and easy to study.
+
+This project serves as an example of:
+
+- logic modeling
+- constraint reasoning
+- educational GUI development
+- automated deduction
+- Python integration with logic-based tools
