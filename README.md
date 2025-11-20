@@ -1,10 +1,8 @@
 # 🧠 First-Order Logic Puzzles + Tkinter GUI
 
 This project implements a collection of **First-Order Logic (FOL) puzzles** solved using **Prover9** and **Mace4**, paired with a **Python Tkinter GUI** that allows users to interactively explore each puzzle, read the clues, and reveal the computed solutions.
-
-The work is based on laboratory tasks from the **Artificial Intelligence** course at the *Technical University of Cluj-Napoca*.  
+ 
 All logic constraints, models, and GUI components are built manually to demonstrate reasoning, model generation, and practical use of FOL tools.  
-*(Information sourced from the project documentation PDF) :contentReference[oaicite:0]{index=0}*
 
 ---
 
