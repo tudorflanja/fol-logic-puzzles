@@ -157,3 +157,7 @@ This project serves as an example of:
 - educational GUI development
 - automated deduction
 - Python integration with logic-based tools
+
+---
+
+This project was developed in collaboration with Boamba Ovidiu, as part of our studies at the Technical University of Cluj-Napoca (UTCN) 🎓.
