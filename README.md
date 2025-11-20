@@ -94,17 +94,14 @@ The GUI provides an accessible interface for navigating puzzles and revealing an
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
-| Folder / File         | Description                                   |
-|-----------------------|-----------------------------------------------|
-| **books/**            | FOL model for the "Books" puzzle              |
-| **firstLastNames/**   | FOL model for the name-matching puzzle        |
-| **logicsGUI/**        | Python Tkinter GUI files                      |
-| **placings/**         | FOL model for the Placings race puzzle        |
-| **toddlersAndTeddies/** | FOL model for the toddlers puzzle           |
-| **README.md**         | Project documentation                         |
-
+- **books/** — FOL model for the *Books* puzzle  
+- **firstLastNames/** — FOL model for the name-matching puzzle  
+- **logicsGUI/** — Python Tkinter GUI files  
+- **placings/** — FOL model for the Placings race puzzle  
+- **toddlersAndTeddies/** — FOL model for the toddlers puzzle  
+- **README.md** — Project documentation  
 
 ---
 
