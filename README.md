@@ -160,4 +160,4 @@ This project serves as an example of:
 
 ---
 
-This project was developed in collaboration with Boamba Ovidiu, as part of our studies at the Technical University of Cluj-Napoca (UTCN) 🎓.
+This project was developed in collaboration with Boamba Ovidiu, as part of our work for the Artificial Intelligence course at the Technical University of Cluj-Napoca (UTCN) 🎓.
